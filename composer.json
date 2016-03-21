@@ -1,0 +1,26 @@
+{
+    "name": "lagdo/xajax-bootstrap",
+    "type": "library",
+    "description": "Xajax notification plugin with the Toastr library.",
+    "authors": [
+        {"name": "Thierry Feuzeu"}
+    ],
+    "homepage": "https://github.com/lagdo/xajax-bootstrap",
+    "license": "BSD-2-Clause",
+    "keywords": ["Xajax", "Ajax", "PHP", "Javascript", "Twitter Bootstrap", "Dialog", "Modal"],
+    "support": {
+        "issues": "https://github.com/lagdo/xajax-bootstrap/issues",
+        "source": "https://github.com/lagdo/xajax-bootstrap"
+    },
+    "require": {
+        "lagdo/xajax-core": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xajax\\Bootstrap\\": "src/"
+        },
+        "files": [
+            "src/start.php"
+        ]
+    }
+}

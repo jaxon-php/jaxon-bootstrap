@@ -1,7 +1,7 @@
 {
     "name": "lagdo/xajax-bootstrap",
     "type": "library",
-    "description": "Xajax notification plugin with the Toastr library.",
+    "description": "Modal dialog for Xajax with Twitter Bootstrap.",
     "authors": [
         {"name": "Thierry Feuzeu"}
     ],

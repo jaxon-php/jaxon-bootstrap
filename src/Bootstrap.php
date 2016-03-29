@@ -13,7 +13,7 @@ class Bootstrap extends \Xajax\Plugin\Response
 
 	public function getName()
 	{
-		return 'bootstrap';
+		return 'twbs';
 	}
 
 	public function generateHash()
@@ -31,7 +31,7 @@ class Bootstrap extends \Xajax\Plugin\Response
 	{
 		return '
 jQuery(document).ready(function($){
-	xajax.command.handler.register("tbModal", function(args) {
+	xajax.command.handler.register("twbsModal", function(args) {
 		if(!$("#" + args.data.container).length)
 		{
 			$("body").append("<div id=\"" + args.data.container + "\"></div>");
@@ -87,7 +87,8 @@ jQuery(document).ready(function($){
 	</div>
 ';
 		// Show the modal dialog
-		$this->addCommand(array('cmd' => 'tbModal'), array('content' => $modalHtml, 'container' => $this->sContainer, 'width' => $width));
+		$this->addCommand(array('cmd' => 'twbsModal'),
+			array('content' => $modalHtml, 'container' => $this->sContainer, 'width' => $width));
 	}
 
 	public function hide()

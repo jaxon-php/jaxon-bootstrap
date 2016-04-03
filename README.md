@@ -4,7 +4,7 @@ Twitter Bootstrap modal dialog for Xajax
 
 #### Installation
 
-Run `composer require lagdo/xajax-bootstrap`, or add `"lagdo/xajax-bootstrap": : "dev-master"` in your composer.json.
+Run `composer require lagdo/xajax-bootstrap`, or add `"lagdo/xajax-bootstrap": "dev-master"` in your composer.json.
 
 Add JQuery in the HTML header.
 

@@ -30,19 +30,16 @@ class Bootstrap extends \Xajax\Plugin\Response
 	public function getClientScript()
 	{
 		return '
-jQuery(document).ready(function($){
-	xajax.command.handler.register("twbsModal", function(args) {
-		if(!$("#" + args.data.container).length)
-		{
-			$("body").append("<div id=\"" + args.data.container + "\"></div>");
-		}
-		// xajax.dom.assign(args.data.container, "innerHTML", args.data.content);
-		$("#" + args.data.container).html(args.data.content);
-		$(".modal-dialog", args.data.container).css("width", args.data.width + "px");
-		$("#draggable").modal("show");
-	});
-});
-	';
+xajax.command.handler.register("twbsModal", function(args) {
+	if(!$("#" + args.data.container).length)
+	{
+		$("body").append("<div id=\"" + args.data.container + "\"></div>");
+	}
+	// xajax.dom.assign(args.data.container, "innerHTML", args.data.content);
+	$("#" + args.data.container).html(args.data.content);
+	$(".modal-dialog", args.data.container).css("width", args.data.width + "px");
+	$("#draggable").modal("show");
+});';
 	}
 
 	public function show($title, $content, $buttons, $width = 600)

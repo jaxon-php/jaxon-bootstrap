@@ -27,7 +27,7 @@ class Bootstrap extends \Xajax\Plugin\Response
 		$this->sContainer = $sContainer;
 	}
 
-	public function getClientScript()
+	public function getScript()
 	{
 		return '
 xajax.command.handler.register("twbsModal", function(args) {

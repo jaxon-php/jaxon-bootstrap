@@ -13,7 +13,7 @@ class Bootstrap extends \Xajax\Plugin\Response
 
 	public function getName()
 	{
-		return 'twbs';
+		return 'bootstrap';
 	}
 
 	public function generateHash()

@@ -42,7 +42,7 @@ xajax.command.handler.register("twbsModal", function(args) {
 });';
 	}
 
-	public function show($title, $content, $buttons, $width = 600)
+	public function modal($title, $content, $buttons, $width = 600)
 	{
 		// Code HTML des boutons
 		$modalButtons = '

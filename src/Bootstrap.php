@@ -4,12 +4,10 @@ namespace Xajax\Bootstrap;
 
 class Bootstrap extends \Xajax\Plugin\Response
 {
-    protected $sContainer;
+    use \Xajax\Utils\ContainerTrait;
 
     public function __construct()
-    {
-        $this->sContainer = 'modal-container';
-    }
+    {}
 
     public function getName()
     {
@@ -20,11 +18,6 @@ class Bootstrap extends \Xajax\Plugin\Response
     {
         // Use the version number as hash
         return '0.1.0';
-    }
-
-    public function setContainer($sContainer)
-    {
-        $this->sContainer = $sContainer;
     }
 
     public function getScript()
@@ -44,6 +37,12 @@ xajax.command.handler.register("twbsModal", function(args) {
 
     public function modal($title, $content, $buttons, $width = 600)
     {
+        $sContainer = 'modal-container';
+        if($this->hasOption('bootstrap.dom.container'))
+        {
+            $sContainer = $this->getOption('bootstrap.dom.container');
+        }
+
         // Code HTML des boutons
         $modalButtons = '
 ';
@@ -85,7 +84,7 @@ xajax.command.handler.register("twbsModal", function(args) {
 ';
         // Show the modal dialog
         $this->addCommand(array('cmd' => 'twbsModal'),
-            array('content' => $modalHtml, 'container' => $this->sContainer, 'width' => $width));
+            array('content' => $modalHtml, 'container' => $sContainer, 'width' => $width));
     }
 
     public function hide()

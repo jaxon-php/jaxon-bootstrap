@@ -1,26 +1,71 @@
-## xajax-bootstrap
+Modal Dialog for Xajax with Twitter Bootstrap
+=============================================
 
-Twitter Bootstrap modal dialog for Xajax
+This package implements responsive modal dialog in Xajax applications using Twitter Bootstrap.
 
-#### Installation
+Features
+--------
 
-Run `composer require lagdo/xajax-bootstrap`, or add `"lagdo/xajax-bootstrap": "dev-master"` in your composer.json.
+- Enrich the Xajax response with functions to show and hide dialogs.
 
-Add JQuery in the HTML header.
+The Twitter Bootstrap Js and CSS files shall be loaded into the page prior to using this package.
 
-#### Usage
+Installation
+------------
 
-The plugin can be called with the `twbs` attribute in the Xajax response object.
+Add the following line in the `composer.json` file.
+```json
+"require": {
+    "lagdo/xajax-bootstrap": "dev-master"
+}
+```
+
+Or run the command
+```bash
+composer require lagdo/xajax-bootstrap
+```
+
+Configuration
+------------
+
+By default the plugin adds Bootstrap code into a div element with id `modal-container`, which should be already present in the page.
+
+The element id can be changed by setting the `bootstrap.dom.container` option to another value.
+
+Usage
+-----
+
+This example shows how to display a modal dialog.
 ```
 function myFunction()
 {
-    $xResponse = new \Xajax\Response\Response();
+    $response = new \Xajax\Response\Response();
+
     // Process the request
     // ...
+
     // Show a modal dialog
     $buttons = array(array('title' => 'Close', 'class' => 'btn', 'click' => 'close'));
-    $width = 300;
-    $xResponse->twbs->show("Modal Dialog", "This modal dialog is powered by Twitter Bootstrap!!", $buttons, $width);
-    return $xResponse;
+    $width = 400;
+    $response->bootstrap->modal("Modal Dialog", "This modal dialog is powered by Twitter Bootstrap!!", $buttons, $width);
+
+    return $response;
 }
 ```
+
+The `bootstrap` attribute of Xajax response provides the following functions.
+```
+public function modal($title, $content, $buttons, $width = 600);    // Show a modal dialog
+public function hide();                                             // Hide the modal dialog
+```
+
+Contribute
+----------
+
+- Issue Tracker: github.com/lagdo/xajax-bootstrap/issues
+- Source Code: github.com/lagdo/xajax-bootstrap
+
+License
+-------
+
+The project is licensed under the BSD license.

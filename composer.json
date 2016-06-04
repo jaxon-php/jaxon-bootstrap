@@ -1,23 +1,23 @@
 {
-    "name": "lagdo/xajax-bootstrap",
+    "name": "lagdo/jaxon-bootstrap",
     "type": "library",
-    "description": "Modal dialog for Xajax with Twitter Bootstrap.",
+    "description": "Modal dialog for Jaxon with Twitter Bootstrap.",
     "authors": [
         {"name": "Thierry Feuzeu"}
     ],
-    "homepage": "https://github.com/lagdo/xajax-bootstrap",
+    "homepage": "https://github.com/lagdo/jaxon-bootstrap",
     "license": "BSD-2-Clause",
-    "keywords": ["Xajax", "Ajax", "PHP", "Javascript", "Twitter Bootstrap", "Dialog", "Modal"],
+    "keywords": ["Jaxon", "Xajax", "Ajax", "PHP", "Javascript", "Twitter Bootstrap", "Dialog", "Modal"],
     "support": {
-        "issues": "https://github.com/lagdo/xajax-bootstrap/issues",
-        "source": "https://github.com/lagdo/xajax-bootstrap"
+        "issues": "https://github.com/lagdo/jaxon-bootstrap/issues",
+        "source": "https://github.com/lagdo/jaxon-bootstrap"
     },
     "require": {
-        "lagdo/xajax-core": "dev-master"
+        "lagdo/jaxon-core": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "Xajax\\Bootstrap\\": "src/"
+            "Jaxon\\Bootstrap\\": "src/"
         },
         "files": [
             "src/start.php"

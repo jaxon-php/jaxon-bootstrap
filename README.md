@@ -1,12 +1,12 @@
-Modal Dialog for Xajax with Twitter Bootstrap
+Modal Dialog for Jaxon with Twitter Bootstrap
 =============================================
 
-This package implements responsive modal dialog in Xajax applications using Twitter Bootstrap.
+This package implements responsive modal dialog in Jaxon applications using Twitter Bootstrap.
 
 Features
 --------
 
-- Enrich the Xajax response with functions to show and hide dialogs.
+- Enrich the Jaxon response with functions to show and hide dialogs.
 
 The Twitter Bootstrap Js and CSS files shall be loaded into the page prior to using this package.
 
@@ -16,13 +16,13 @@ Installation
 Add the following line in the `composer.json` file.
 ```json
 "require": {
-    "lagdo/xajax-bootstrap": "dev-master"
+    "lagdo/jaxon-bootstrap": "dev-master"
 }
 ```
 
 Or run the command
 ```bash
-composer require lagdo/xajax-bootstrap
+composer require lagdo/jaxon-bootstrap
 ```
 
 Configuration
@@ -39,7 +39,7 @@ This example shows how to display a modal dialog.
 ```php
 function myFunction()
 {
-    $response = new \Xajax\Response\Response();
+    $response = new \Jaxon\Response\Response();
 
     // Process the request
     // ...
@@ -53,7 +53,7 @@ function myFunction()
 }
 ```
 
-The `bootstrap` attribute of Xajax response provides the following functions.
+The `bootstrap` attribute of Jaxon response provides the following functions.
 ```php
 public function modal($title, $content, $buttons, $width = 600);    // Show a modal dialog
 public function hide();                                             // Hide the modal dialog
@@ -62,8 +62,8 @@ public function hide();                                             // Hide the 
 Contribute
 ----------
 
-- Issue Tracker: github.com/lagdo/xajax-bootstrap/issues
-- Source Code: github.com/lagdo/xajax-bootstrap
+- Issue Tracker: github.com/lagdo/jaxon-bootstrap/issues
+- Source Code: github.com/lagdo/jaxon-bootstrap
 
 License
 -------

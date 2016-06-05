@@ -23,12 +23,12 @@ class Bootstrap extends \Jaxon\Plugin\Response
     public function getScript()
     {
         return '
-jaxon.command.handler.register("twbsModal", function(args) {
+xajax.command.handler.register("twbsModal", function(args) {
     if(!$("#" + args.data.container).length)
     {
         $("body").append("<div id=\"" + args.data.container + "\"></div>");
     }
-    // jaxon.dom.assign(args.data.container, "innerHTML", args.data.content);
+    // xajax.dom.assign(args.data.container, "innerHTML", args.data.content);
     $("#" + args.data.container).html(args.data.content);
     $(".modal-dialog", args.data.container).css("width", args.data.width + "px");
     $("#draggable").modal("show");

@@ -16,13 +16,13 @@ Installation
 Add the following line in the `composer.json` file.
 ```json
 "require": {
-    "lagdo/jaxon-bootstrap": "dev-master"
+    "jaxon-php/jaxon-bootstrap": "dev-master"
 }
 ```
 
 Or run the command
 ```bash
-composer require lagdo/jaxon-bootstrap
+composer require jaxon-php/jaxon-bootstrap
 ```
 
 Configuration
@@ -62,8 +62,8 @@ public function hide();                                             // Hide the 
 Contribute
 ----------
 
-- Issue Tracker: github.com/lagdo/jaxon-bootstrap/issues
-- Source Code: github.com/lagdo/jaxon-bootstrap
+- Issue Tracker: github.com/jaxon-php/jaxon-bootstrap/issues
+- Source Code: github.com/jaxon-php/jaxon-bootstrap
 
 License
 -------

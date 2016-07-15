@@ -16,7 +16,7 @@ Installation
 Add the following line in the `composer.json` file.
 ```json
 "require": {
-    "jaxon-php/jaxon-bootstrap": "dev-master"
+    "jaxon-php/jaxon-bootstrap": "1.0.*"
 }
 ```
 
